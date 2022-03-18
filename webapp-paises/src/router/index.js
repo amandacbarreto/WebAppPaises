@@ -1,22 +1,32 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import TelaFavoritos from '../views/TelaFavoritos.vue'
+import TelaInicio from '../views/TelaInicio.vue'
+import TelaLogin from '../views/TelaLogin.vue'
+import TestandoConhecimentos from '../views/TestandoConhecimentos.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'login',
+    component: TelaLogin
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/inicio',
+    name: 'Inicio',
+    component: TelaInicio
+  },
+  {
+    path: '/favoritos',
+    name: 'Favoritos',
+    component: TelaFavoritos
+  },
+  {
+    path: '/testandoconhecimentos',
+    name: 'TestandoConhecimentos',
+    component: TestandoConhecimentos
   }
 ]
 
